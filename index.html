@@ -45,7 +45,9 @@
 
             </main>
         <spline-viewer class="modelo-3d desktop" url="https://prod.spline.design/MWKUi7IgLMOCOFcR/scene.splinecode"></spline-viewer>
-        <spline-viewer class="modelo-3d mobile" url="https://prod.spline.design/qufYsZswDBoJ1Kry/scene.splinecode"></spline-viewer>
+        <spline-viewer class="modelo-3d mobile" url="https://prod.spline.design/P3oOcZWYx4lfoGmq/scene.splinecode"></spline-viewer>
+    
+        
     </div>
     
    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.28/build/spline-viewer.js"></script>
@@ -67,6 +69,14 @@ overlay.addEventListener("click", () => {
 });
 
     </script>
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const logo = document.getElementById("logo");
+    if (logo) {
+      logo.style.display = "none"; // pisa el inline existente
+    }
+  });
+</script>
 
 </body>
 </html>

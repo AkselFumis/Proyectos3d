@@ -5,6 +5,7 @@ body{
     overflow-x: hidden;
 }
 
+
 #overlay {
   position: fixed;
   top: 0;
@@ -263,6 +264,13 @@ main{
 }
 
 @media (max-width: 950px){
+    header{
+        z-index: 100;
+        overflow: hidden;
+    }
+    .modelo-3d{
+        padding-top: 2%;
+    }
     nav {
     position: fixed;
     top: 0;
@@ -306,6 +314,7 @@ main{
     .mobile{
         display: block;
     }
+    
   }
 
 
@@ -323,7 +332,7 @@ main{
     }
 
     .button{
-        width: 80%; 
+        width: 100%; 
         padding: 0.8rem 0.8rem;
     }
 
@@ -336,8 +345,16 @@ main{
     }
 
     .content{
-        margin: 5%;
-        margin-top: 95vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 5% 0 5% 0;
+        margin-top: 92vh;
+        margin-left: 0%;
+    
+        background-color: #0E0E0E;
         
     }
 
@@ -351,14 +368,16 @@ main{
 
     .content .descripcion{
         width: 100%;
+        text-align: center;
     }
 
     .botones{
         justify-content: center;
+        width: 80%;
     }
 
     .modelo-3d{
-        top:20%;
+        top:14%;
         right: 2%;
     }
 }
@@ -366,6 +385,8 @@ main{
 @media (max-width: 480px) {
     header{
         padding: 1rem 0.4rem;
+        z-index: 100;
+        background-color: black;
     }
     header h1{
         font-size: 2rem;
@@ -377,13 +398,15 @@ main{
         padding: 0.6rem 1.5rem;
     }
     .content{
-        margin-left: 5%;
+        width: 90%;
     }
     .modelo-3d{
-        top: 20%;
+        top: 15%;
+        scale: 1;
+        z-index: 1;
     }
     main{
-        margin-top: 25rem;
+        margin-top: 15rem;
     }
     .content{
         margin-top: 40vh;
