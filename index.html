@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Proyecto Animado 3D</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div class="container" id="main">
+        <header>
+            <h1>AWD <img src="Imagenes/Icono.webp" alt=""></h1>
+
+            <nav id="menu">
+                <a href="#main">Contacto</a>
+                <a href="#main">Servicio</a>
+                <a href="#main">Sobre nosotros</a>
+                <button class="button mobile"><span>Mi pagina web</span></button>
+            </nav>
+
+            <button class="hamburger" id="hamburger">
+            ☰
+            </button>
+
+            <button class="button desktop"><span>Mi pagina web</span></button>
+
+        </header>
+       
+            <main >
+            <div class="content">
+                <div class="tag-box">
+                    <div class="tag">Introduccion &wedbar;</div>
+                </div>
+                <h2>Projecto de <br> Contenido 3D</h2>
+                <p class="descripcion">
+                Una serie de proyectos / prototipos de prueba para animaciones 3d en paginas web
+                </p>
+                <div class="botones">
+                    <a href="" class="boton-disenos">Mas Diseños</a>
+                    <a href="" class="boton-contactame">Contactame</a>
+                </div>
+            </div>
+
+            </main>
+        <spline-viewer class="modelo-3d" url="https://prod.spline.design/MWKUi7IgLMOCOFcR/scene.splinecode"></spline-viewer>
+    </div>
+    
+   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.28/build/spline-viewer.js"></script>
+   <!-- hamburgesa -->
+   <script>
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("show");
+  overlay.classList.toggle("show");
+});
+
+// Si se hace clic en el overlay, se cierra el menú
+overlay.addEventListener("click", () => {
+  menu.classList.remove("show");
+  overlay.classList.remove("show");
+});
+
+    </script>
+
+</body>
+</html>
