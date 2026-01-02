@@ -420,4 +420,12 @@ main{
     .botones{
         margin-bottom: 30px;
     }
+    .boton-contactame{
+        font-size: 0.8rem;
+        width: 35%;
+    }
+    .boton-disenos{
+        font-size: 0.8rem;
+        width: 35%
+    }
 }
