@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="robot.css">
+    <title>Robot Interactivo</title>
+</head>
+<body>
+     <div id="overlay"></div>
+    <div class="container" id="main">
+        <header>
+            <h1>AWD <img src="Imagenes/Icono.webp" alt=""></h1>
+
+            <nav id="menu">
+                <a href="#main">Contacto</a>
+                <a href="#main">Otro Diseño</a>
+                <a href="#main">Sobre nosotros</a>
+                <button class="button mobile"><span>Mi pagina web</span></button>
+            </nav>
+
+            <button class="hamburger" id="hamburger">
+            ☰
+            </button>
+
+            <button class="button desktop"><span>Mi pagina web</span></button>
+
+        </header>
+
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.38/build/spline-viewer.js"></script>
+            <spline-viewer class="" url="https://prod.spline.design/3S2gXEtcPcdD3Qbj/scene.splinecode"></spline-viewer>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        overlay.classList.toggle("show");
+        });
+
+        // Si se hace clic en el overlay, se cierra el menú
+        overlay.addEventListener("click", () => {
+        menu.classList.remove("show");
+        overlay.classList.remove("show");
+        });
+
+    </script>
+    <script>
+         window.addEventListener("DOMContentLoaded", () => {
+        const logo = document.getElementById("logo");
+        if (logo) {
+        logo.style.display = "none"; // pisa el inline existente
+        }
+         });
+    </script>
+</body>
+</html>
